@@ -14,8 +14,8 @@ const { generate } = require('genkit/ai');
 // Initialize Firebase
 initializeApp({
   credential: applicationDefault(),
-  databaseURL: `https://unwritten.firebaseio.com`,
-  storageBucket: `unwritten.appspot.com`
+  databaseURL: `https://<YOUR_PROJECT_ID>.firebaseio.com`,
+  storageBucket: `<YOUR_PROJECT_ID>.appspot.com`
 });
 
 // Configure Genkit
@@ -91,6 +91,8 @@ app.post('/run-flow', async (req, res) => {
 
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+const host = '0.0.0.0';
+
+app.listen(port, host, () => {
   console.log(`Server listening on port ${port}`);
 });
