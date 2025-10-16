@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "googleCloud"
+    }
+  ],
+  "model": "googleCloud/gemini-1.5-flash",
+  "logLevel": "debug"
+}
