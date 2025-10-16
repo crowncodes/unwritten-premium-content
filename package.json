@@ -4,18 +4,19 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "genkit:ui": "genkit start -- node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@genkit-ai/firebase": "^1.21.0",
-    "@genkit-ai/googleai": "^1.21.0",
     "express": "^4.19.2",
-    "firebase-admin": "^13.5.0",
-    "genkit": "^1.21.0",
-    "zod": "^3.23.8"
+    "firebase-admin": "^12.1.0",
+    "zod": "^3.23.8",
+    "genkit": "latest",
+    "@genkit-ai/google-genai": "latest",
+    "@genkit-ai/firebase": "latest"
   }
 }

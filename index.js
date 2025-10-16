@@ -3,25 +3,27 @@ const { initializeApp, applicationDefault } = require('firebase-admin/app');
 const { getAuth } = require('firebase-admin/auth');
 const { getStorage } = require('firebase-admin/storage');
 const { getDatabase } = require('firebase-admin/database');
-const { configure, defineFlow, run } = require('genkit');
+const { configure } = require('@genkit-ai/core');
+const { defineFlow, run } = require('@genkit-ai/flow');
 const { firebase } = require('@genkit-ai/firebase');
 const { googleAI } = require('@genkit-ai/googleai');
 const { z } = require('zod');
 const express = require('express');
-const { generate } = require('genkit/ai');
+const { generate }.
+const { generate } = require('@genkit-ai/ai');
 
 
 // Initialize Firebase
 initializeApp({
   credential: applicationDefault(),
-  databaseURL: `https://<YOUR_PROJECT_ID>.firebaseio.com`,
-  storageBucket: `<YOUR_PROJECT_ID>.appspot.com`
+  databaseURL: `https://crowncodes.firebaseio.com`,
+  storageBucket: `crowncodes.appspot.com`
 });
 
 // Configure Genkit
 configure({
   plugins: [
-    firebase(),
+    firebase,
     googleAI(),
   ],
   logLevel: 'debug',

@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "genkit": {
+      "command": "genkit",
+      "args": [
+        "mcp"
+      ],
+      "cwd": "",
+      "timeout": 30000,
+      "trust": false
+    },
+    "firebase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "experimental:mcp",
+        "--only",
+        "auth,firestore"
+      ]
+    }
+  }
+}
